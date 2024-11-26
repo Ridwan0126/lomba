@@ -1,21 +1,28 @@
-import React from 'react'
-import { BookOpen, Star } from 'lucide-react'
+import { useNavigate } from 'react-router-dom';
+import React from 'react';
+import { BookOpen, Star } from 'lucide-react';
 
-function CourseCard({ 
-  title, 
-  subject, 
-  points, 
-  progress, 
-  image, 
-  isLarge = false 
+function CourseCard({
+  title,
+  subject,
+  points,
+  progress,
+  image,
+  isLarge = false,
 }) {
+  const navigate = useNavigate();
+
   return (
-    <div className={`overflow-hidden rounded-lg border bg-white ${isLarge ? 'flex gap-4' : ''}`}>
+    <div
+      className={`overflow-hidden rounded-lg border bg-white ${
+        isLarge ? 'flex gap-4' : ''
+      }`}
+    >
       <div className={`relative ${isLarge ? 'w-48' : 'w-full'}`}>
-        <img 
-          src={image} 
-          alt={subject} 
-          className="h-48 w-full object-cover" 
+        <img
+          src={image}
+          alt={subject}
+          className="h-48 w-full object-cover"
         />
         <div className="absolute top-2 left-2 rounded bg-black/50 px-2 py-1 text-xs text-white">
           12 Bab
@@ -36,24 +43,33 @@ function CourseCard({
         <div className="mt-auto">
           <div className="mb-2 flex items-center justify-between text-sm">
             <span>Progress: {progress}%</span>
-            {isLarge && <button className="rounded-lg bg-[#006D77] px-4 py-1 text-white">Lanjut</button>}
+            {isLarge && (
+              <button
+                className="rounded-lg bg-[#006D77] px-4 py-1 text-white"
+                onClick={() => navigate('/materi/DetailMateri')}
+              >
+                Lanjut
+              </button>
+            )}
           </div>
           <div className="h-2 overflow-hidden rounded-full bg-gray-200">
-            <div 
-              className="h-full bg-[#006D77]" 
+            <div
+              className="h-full bg-[#006D77]"
               style={{ width: `${progress}%` }}
             />
           </div>
           {!isLarge && (
-            <button className="mt-4 w-full rounded-lg bg-[#006D77] px-4 py-2 text-white">
+            <button
+              className="mt-4 w-full rounded-lg bg-[#006D77] px-4 py-2 text-white"
+              onClick={() => navigate('DetailMateri')} 
+            >
               Mulai
             </button>
           )}
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default CourseCard
-
+export default CourseCard;

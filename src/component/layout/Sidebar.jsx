@@ -33,7 +33,7 @@ const Sidebar = ({ activeItem, setActiveItem, onLogout }) => {
               <button
                 key={text}
                 onClick={() => setActiveItem(text)}
-                className={`flex items-center justify-center lg:justify-start lg:gap-3 p-2 lg:px-4 lg:py-2 text-sm rounded-3xl lg:rounded-xl transition-colors duration-200 min-w-[3rem] md:min-w-[3.5rem] lg:min-w-0 lg:w-full
+                className={`flex items-center space-x-3 px-4 py-2 text-gray-600 hover:text-gray-900 rounded-lg
                   ${
                     activeItem === text
                       ? "bg-white text-gray-700 lg:bg-customTeal lg:text-white"

@@ -80,7 +80,7 @@ export default function Tugas() {
             {
               title: "Fotografi",
               type: "Ujian",
-              description: "Evaluasi penguasaan teknik dan konsep fotografi",
+              description: "Evaluasi penguasaan teknik dan konsep dalam fotografi",
               image: "/src/assets/gm02.png",
               icn: "/src/assets/icn01.png",
             },
@@ -95,7 +95,7 @@ export default function Tugas() {
             {
               title: "Audio Video",
               type: "Latihan",
-              description: "Latihan praktis untuk pengolahan audio dan video",
+              description: "Latihan praktis untuk melatih teknik pengolahan audio dan video",
               image: "/src/assets/gm04.png",
               icn: "/src/assets/icn01.png",
             },
@@ -110,14 +110,14 @@ export default function Tugas() {
             {
               title: "B.Indonesia",
               type: "Quiz",
-              description: "Menguji kemampuan berbahasa Indonesia",
+              description: "Menguji kemampuan berbahasa Indonesia yang benar",
               image: "/src/assets/gm06.png",
               icn: "/src/assets/icn01.png",
             },
             {
               title: "B.Inggris",
               type: "Latihan",
-              description: "Evaluasi kemampuan berbahasa Inggris",
+              description: "Evaluasi kemampuan public speaking berbahasa Inggris",
               image: "/src/assets/gm07.png",
               icn: "/src/assets/icn01.png",
             },

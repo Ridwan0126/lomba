@@ -11,8 +11,9 @@ import Settings from "./pages/Settings/Settings";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import Forum from "./pages/Forum/Forum";
 import Materi from "./pages/Materi/Materi";
+import DetailMateri from "./pages/DetailMateri/DetailMateri";
 import Tugas from "./pages/Tugas/Tugas";
-import LiveClass from "./pages/Liveclass/LiveClass";
+import LiveClass from "./pages/LiveClass/LiveClass";
 
 const App = () => {
   return (
@@ -22,51 +23,25 @@ const App = () => {
         <Route path="/login" element={<LoginPage />} />
         <Route
           path="/dashboard"
-          element={
-            <DashboardLayout>
-              <Dashboard />
-            </DashboardLayout>
-          }
+          element={<DashboardLayout><Dashboard /></DashboardLayout>}
         />
-        <Route
-          path="/materi"
-          element={
-            <DashboardLayout>
-              <Materi />
-            </DashboardLayout>
-          }
-        />
+        <Route path="/materi" element={<DashboardLayout><Materi /></DashboardLayout>} />
+        <Route path="/materi/:id" element={<DashboardLayout><DetailMateri /></DashboardLayout>} />
         <Route
           path="/tugas"
-          element={
-            <DashboardLayout>
-              <Tugas />
-            </DashboardLayout>
-          }
+          element={<DashboardLayout><Tugas /></DashboardLayout>}
         />
         <Route
-          path="/live-class"
-          element={
-            <DashboardLayout>
-              <LiveClass />
-            </DashboardLayout>
-          }
+          path="/liveClass"
+          element={<DashboardLayout><LiveClass /></DashboardLayout>}
         />
         <Route
           path="/forum"
-          element={
-            <DashboardLayout>
-              <Forum />
-            </DashboardLayout>
-          }
+          element={<DashboardLayout><Forum /></DashboardLayout>}
         />
         <Route
           path="/settings"
-          element={
-            <DashboardLayout>
-              <Settings />
-            </DashboardLayout>
-          }
+          element={<DashboardLayout><Settings /></DashboardLayout>}
         />
       </Routes>
     </Router>
